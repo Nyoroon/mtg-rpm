@@ -7,11 +7,11 @@ Summary:	MtProto proxy for Telegram writen on Go
 License:	MIT
 URL:		https://github.com/9seconds/%{name}
 
-Source0:	https://github.com/9seconds/%{name}/releases/download/%{version}/%{name}-linux-amd64
-Source1:        mtg.service
-Source2:        mtg.default
+Source0:	%{url}/%{name}/releases/download/%{version}/%{name}-linux-amd64
+Source1:	mtg.service
+Source2:	mtg.default
 
-BuildRequires:  systemd
+BuildRequires:	systemd
 %{?systemd_requires}
 
 
