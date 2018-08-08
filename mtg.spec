@@ -2,7 +2,7 @@
 
 Name:		mtg
 Version:	0.12
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	MtProto proxy for Telegram writen on Go
 License:	MIT
 URL:		https://github.com/9seconds/%{name}
@@ -11,8 +11,8 @@ Source0:	https://github.com/9seconds/%{name}/releases/download/%{version}/%{name
 Source1:        mtg.service
 Source2:        mtg.default
 
+BuildRequires:  systemd
 %{?systemd_requires}
-Requires(pre): shadow-utils
 
 
 %description
