@@ -1,0 +1,13 @@
+[Unit]
+Description=MtProto proxy for Telegram writen on Go
+Documentation=https://github.com/9seconds/mtg
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/mtg
+User=nobody
+ExecStart=/usr/bin/mtg $MTG_SECRET $MTG_AD_TAG
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
