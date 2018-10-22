@@ -12,6 +12,7 @@ Source1:	mtg.service
 Source2:	mtg.default
 
 BuildRequires:	golang >= 1.11
+BuildRequires:	git
 BuildRequires:	systemd
 %{?systemd_requires}
 
