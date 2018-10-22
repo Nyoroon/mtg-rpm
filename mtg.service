@@ -9,5 +9,8 @@ User=nobody
 ExecStart=/usr/bin/mtg $MTG_SECRET $MTG_AD_TAG
 Restart=on-failure
 
+PrivateTmp=yes
+PrivateDevices=yes
+
 [Install]
 WantedBy=multi-user.target
