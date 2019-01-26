@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:		mtg
-Version:	0.15
-Release:	2%{?dist}
+Version:	0.15.1
+Release:	1%{?dist}
 Summary:	MtProto proxy for Telegram writen on Go
 License:	MIT
 URL:		https://github.com/9seconds/%{name}
@@ -22,13 +22,9 @@ MtProto proxy for Telegram writen on Go
 
 %prep
 %setup -q
-cat > version.go <<EOF
-package main
-const version = "%{version} ($(go version)) [$(date -Ru)]"
-EOF
 
 %build
-%make_build
+%make_build VERSION_TAG=%{version}
 
 %install
 install -D -m 755 %{name} %{buildroot}%{_bindir}/%{name}
