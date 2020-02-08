@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:		mtg
-Version:	0.16
+Version:	1.0.2
 Release:	1%{?dist}
 Summary:	MtProto proxy for Telegram writen on Go
 License:	MIT
